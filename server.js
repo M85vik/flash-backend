@@ -16,7 +16,7 @@ connectToDatabase();
 const FRONTEND_URL= process.env.FRONTEND_URL
 if(!FRONTEND_URL) throw new Error("Front URL Environment Varibale Not loaded.");
 app.use(express.json({limit:"5mb"}))
-app.use(cors({ origin:[FRONTEND_URL], credentials: true })); //"http://localhost:3000","http://localhost:5173"
+app.use(cors()); //"http://localhost:3000","http://localhost:5173"
 app.use(cookieParser());
 
 
